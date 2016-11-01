@@ -1,0 +1,31 @@
+group 'spring-boot-test'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+apply plugin: 'spring-boot'
+
+buildscript {
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-tomcat:' + springBootVersion ,
+            'org.springframework:spring-webmvc:4.3.3.RELEASE' ,
+            'org.springframework.boot:spring-boot-starter:' + springBootVersion,
+            'org.springframework.boot:spring-boot-autoconfigure:' + springBootVersion
+}

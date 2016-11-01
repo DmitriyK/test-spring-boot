@@ -1,0 +1,2 @@
+rootProject.name = 'test.spring.boot'
+springBootVersion = '1.4.0.RELEASE'
